@@ -11,15 +11,15 @@ const routes: Routes = [
     component: LandingComponent,
   },
   {
-    path: '/my-profile',
+    path: 'my-profile',
     component: MyProfileComponent,
   },
   {
-    path: '/my-orders',
+    path: 'my-orders',
     component: MyOrdersComponent,
   },
   {
-    path: '/cars',
+    path: 'cars',
     component: CarsComponent,
   },
 ];
