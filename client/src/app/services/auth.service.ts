@@ -1,7 +1,12 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../models';
 import { Nullable } from '../types';
+
+const mockUser: User = {
+  email: 'email@email.com',
+  name: 'name',
+};
 
 @Injectable({
   providedIn: 'root',
@@ -13,13 +18,13 @@ export class AuthService {
     return this.userSubject.value;
   }
 
+  get user$(): Observable<Nullable<User>> {
+    return this.userSubject.asObservable();
+  }
+
   constructor() {}
 
   login(): void {
-    const mockUser: User = {
-      email: 'email@email.com',
-      name: 'name',
-    };
     this.userSubject.next(mockUser);
   }
 

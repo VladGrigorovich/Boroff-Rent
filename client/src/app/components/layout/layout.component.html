@@ -1,10 +1,24 @@
-<mat-toolbar color="primary" class="layout">
-  <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="flex-start center">
-    <img class="logo" src="assets/pngwing.com.png" alt="Logo" />
-    <h1>Boroff Rent</h1>
-  </div>
-</mat-toolbar>
-
-<!-- Copyright 2022 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at https://angular.io/license -->
+<div class="layout">
+  <mat-toolbar class="header" color="primary" fxLayout="row ">
+    <img class="header__logo" src="assets/pngwing.com.png" alt="Logo" />
+    <h1 class="header__title">Boroff Rent</h1>
+    <div class="header__navigation">
+      <button *ngIf="!isLoggedIn" mat-raised-button (click)="login()">login</button>
+      <button *ngIf="isLoggedIn" mat-raised-button (click)="logout()">logout</button>
+    </div>
+  </mat-toolbar>
+  <mat-drawer-container class="main-container">
+    <mat-drawer class="navigation" mode="side" [opened]="!!authenticatedUser">
+      <button mat-flat-button routerLink="/my-profile" routerLinkActive="active-nav-link">
+        Учетная Запись
+      </button>
+      <button mat-flat-button routerLink="/my-orders" routerLinkActive="active-nav-link">
+        Мои Заказы
+      </button>
+      <button mat-flat-button routerLink="/cars" routerLinkActive="active-nav-link">
+        Сделать заказ
+      </button>
+    </mat-drawer>
+    <mat-drawer-content class="content"><router-outlet></router-outlet></mat-drawer-content>
+  </mat-drawer-container>
+</div>

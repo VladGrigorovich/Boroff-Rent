@@ -1,5 +1,30 @@
 .layout {
-  .logo {
-    width: 80px;
+  .header {
+    &__logo {
+      width: 80px;
+    }
+    &__title {
+    }
+
+    &__navigation {
+      margin-left: auto;
+    }
+  }
+
+  .main-container {
+    height: calc(100vh - 64px);
+
+    .navigation {
+      padding: 10px;
+      min-width: 300px;
+
+      ::ng-deep.mat-drawer-inner-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    .content {
+    }
   }
 }
