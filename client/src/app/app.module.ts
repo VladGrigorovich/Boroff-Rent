@@ -11,6 +11,7 @@ import { LandingComponent } from './components/landing/landing.component';
 import { CarsComponent } from './components/cars/cars.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { MyOrdersComponent } from './components/my-orders/my-orders.component';
+import { CarPreviewComponent } from './components/car-preview/car-preview.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MyOrdersComponent } from './components/my-orders/my-orders.component';
     CarsComponent,
     MyProfileComponent,
     MyOrdersComponent,
+    CarPreviewComponent,
   ],
   imports: [
     BrowserModule,

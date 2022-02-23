@@ -3,8 +3,7 @@
     <img class="header__logo" src="assets/pngwing.com.png" alt="Logo" />
     <h1 class="header__title">Boroff Rent</h1>
     <div class="header__navigation">
-      <button *ngIf="!isLoggedIn" mat-raised-button (click)="login()">login</button>
-      <button *ngIf="isLoggedIn" mat-raised-button (click)="logout()">logout</button>
+      <button *ngIf="isLoggedIn" mat-raised-button (click)="logout()">Выйти</button>
     </div>
   </mat-toolbar>
   <mat-drawer-container class="main-container">

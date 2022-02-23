@@ -1,1 +1,22 @@
-<p>landing works!</p>
+<div
+  class="common-container landing-container"
+  fxLayout="column"
+  fxLayoutAlign="flex-start center"
+  fxLayoutGap="20px"
+>
+  <h1 class="company-name">BORROOFF RENT</h1>
+  <div class="company-description">
+    Автомобиль в Киеве является незаменимым помощником, который обеспечит мобильность, комфорт и
+    свободу передвижения, а также позволит сэкономить множество времени. Компания Borroff Rent уже
+    более 10 лет занимается прокатом машин в Киеве и других городах Украины, предлагает большой парк
+    современных автомобилей на любой бюджет и вкус. Вас ожидает простая и понятная политика
+    компании, расширенный набор дополнительных услуг, множество выгод.
+  </div>
+  <div class="actions" fxLayout="column" fxLayoutGap="10px">
+    <button mat-raised-button color="primary" (click)="login()">Войти</button>
+    <button mat-raised-button color="primary">Зарегистрироваться</button>
+  </div>
+  <div class="cars-preview">
+    <app-car-preview [car]="cars[0]"></app-car-preview>
+  </div>
+</div>
