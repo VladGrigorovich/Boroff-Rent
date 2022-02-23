@@ -13,10 +13,14 @@
     компании, расширенный набор дополнительных услуг, множество выгод.
   </div>
   <div class="actions" fxLayout="column" fxLayoutGap="10px">
-    <button mat-raised-button color="primary" (click)="login()">Войти</button>
-    <button mat-raised-button color="primary">Зарегистрироваться</button>
+    <button mat-raised-button color="accent" (click)="login()">Войти</button>
+    <button mat-raised-button color="accent">Зарегистрироваться</button>
   </div>
   <div class="cars-preview">
+    <app-car-preview [car]="cars[0]"></app-car-preview>
+    <app-car-preview [car]="cars[0]"></app-car-preview>
+    <app-car-preview [car]="cars[0]"></app-car-preview>
+    <app-car-preview [car]="cars[0]"></app-car-preview>
     <app-car-preview [car]="cars[0]"></app-car-preview>
   </div>
 </div>

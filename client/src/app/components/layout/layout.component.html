@@ -1,7 +1,9 @@
 <div class="layout">
   <mat-toolbar class="header" color="primary" fxLayout="row ">
-    <img class="header__logo" src="assets/pngwing.com.png" alt="Logo" />
-    <h1 class="header__title">Boroff Rent</h1>
+    <div class="header__logo">
+      <div>BORROFF</div>
+      <div>RENT</div>
+    </div>
     <div class="header__navigation">
       <button *ngIf="isLoggedIn" mat-raised-button (click)="logout()">Выйти</button>
     </div>

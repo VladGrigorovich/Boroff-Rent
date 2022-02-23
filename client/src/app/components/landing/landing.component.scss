@@ -4,6 +4,7 @@
   }
 
   .company-description {
+    text-align: center;
     color: rgba(0, 0, 0, 0.7);
     font-weight: 500;
     line-height: 30px;
@@ -17,5 +18,10 @@
 
   .cars-preview {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 }

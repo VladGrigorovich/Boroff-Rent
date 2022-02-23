@@ -1,8 +1,19 @@
 .layout {
   .header {
+    position: sticky;
+    z-index: 100;
+    box-shadow: 0 2px 4px 1px rgb(0 0 0 / 40%);
+
     &__logo {
       width: 80px;
+
+      * {
+        font-size: 25px;
+        line-height: 20px;
+        text-shadow: 2px 2px 1px black;
+      }
     }
+
     &__title {
     }
 
