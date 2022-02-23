@@ -1,0 +1,19 @@
+<mat-card class="car-preview-container">
+  <mat-card-header>
+    <mat-card-title>{{ car.brand }}</mat-card-title>
+    <mat-card-subtitle>{{ car.model }}</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    mat-card-image
+    src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+    alt="Car Photo"
+  />
+  <mat-card-content>
+    <p>
+      {{ car.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Арендовать!</button>
+  </mat-card-actions>
+</mat-card>
