@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Войти в аккаунт</h2>
+<mat-dialog-content [formGroup]="loginForm" fxLayout="column" fxLayoutGap="10px">
+  <mat-form-field appearance="outline">
+    <mat-label>Имейл</mat-label>
+    <input matInput formControlName="email" placeholder="Имейл" />
+    <mat-error></mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Пароль</mat-label>
+    <input matInput formControlName="password" placeholder="Пароль" />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true">Отмена</button>
+  <button mat-button cdkFocusInitial (click)="login()">Войти</button>
+</mat-dialog-actions>

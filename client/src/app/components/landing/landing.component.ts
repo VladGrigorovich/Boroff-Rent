@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from '../../models';
 import { AuthService } from '../../services/auth.service';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-landing',
@@ -24,11 +26,13 @@ export class LandingComponent implements OnInit {
     },
   ];
 
-  constructor(private readonly authService: AuthService) {}
+  constructor(private readonly authService: AuthService, private readonly dialog: MatDialog) {}
 
   ngOnInit(): void {}
 
   login(): void {
-    this.authService.login();
+    this.dialog.open(LoginComponent, {
+      minWidth: '400px',
+    });
   }
 }
